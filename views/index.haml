@@ -1,0 +1,21 @@
+!!!
+%html
+  %head
+    %title The News
+    %link{ rel: 'stylesheet', href: '/assets/style.css' }
+  %body
+
+    %h1 The News.
+    %h2 Liberation
+    %ul
+      - @libe_articles.each do |article|
+        %li
+          %a{ href: article[:url] }= article[:title]
+
+    %hr
+
+    %h2 NYTimes
+    %ul
+      - @nyt_articles.each do |article|
+        %li
+          %a{ href: article[:url] }= article[:title]
