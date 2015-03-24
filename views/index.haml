@@ -9,13 +9,14 @@
     %h2 Liberation
     %ul
       - @libe_articles.each do |article|
-        %li
+        %li.article
           %a{ href: article[:url] }= article[:title]
 
     %hr
 
-    %h2 NYTimes
+    %h2
+      %a{ href: 'http://www.reddit.com/r/news/' } /r/news
     %ul
-      - @nyt_articles.each do |article|
-        %li
+      - @reddit_articles.each do |article|
+        %li.article
           %a{ href: article[:url] }= article[:title]
